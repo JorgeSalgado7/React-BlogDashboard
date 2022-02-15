@@ -1,14 +1,17 @@
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 
-//CUSTOM CSS
+//CONFIG
 import './scss/main.scss'
-
 import './config/axios.settings'
+
+//PRIME REACT STYLES
+import "primereact/resources/themes/lara-light-indigo/theme.css"
+import "primereact/resources/primereact.min.css"
+import "primeicons/primeicons.css"
 
 //VIEWS
 import Dashboard from "./views/Dashboard";
-import GetBlogs from "./views/Blog/GetBlogs";
-import GetUsers from "./views/Users/GetUsers";
+
 
 function App() {
 	return (
@@ -16,12 +19,9 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 
-				{/** BLOG */}
+				
 				<Route path="/dashboard" element={<Dashboard/>} />
-				<Route path="/blog" element={<GetBlogs/>} />
 
-				{/** USERS */}
-				<Route path="/usuarios" element={<GetUsers/>} />
 
 			</Routes>
 		</BrowserRouter>
