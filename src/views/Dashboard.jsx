@@ -15,9 +15,7 @@ const Dashboard = () => {
 
             <main>
 
-                <Header/>
-
-                
+                <Header/>         
 
             </main>
 
