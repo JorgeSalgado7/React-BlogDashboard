@@ -1,0 +1,272 @@
+.menu{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    background-color: $white;
+    z-index: 100;
+
+    @media(max-width: 991px){
+        left: -200%;
+        height: calc(100vh - 80px);
+        top: 80px;
+        width: 100%;
+    }
+
+    .imgBx{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 15px;
+        background-color: $main;
+
+        @media(max-width: 991px){
+            display: none;
+        }
+
+        img{
+            max-width: 220px;
+            max-height: 190px;
+        }
+
+    }
+
+    nav{
+        width: 100%;
+        height: calc(100% - 250px);
+        padding: 30px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        overflow-y: auto;
+
+         @media(max-width: 991px){
+            padding: 30px 15px;
+            height: 100%;
+        }
+
+        .link-menu{
+            width: 100%;
+            padding: 15px 10px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .actual-level{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                width: 2px;
+                height: 50%;
+                background-color: transparent;
+                transition: 0.3s;
+            }
+
+            .actual-level-active{
+                background-color: $main;
+            }
+
+            .icono{
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i{
+                    font-size: 18px;
+                    color: $grayText;
+                    font-weight: bold;
+                    transition: 0.3s;
+                }
+
+            }
+
+            span{
+                width: calc(100% - 60px);
+                height: 30px;
+                font-size: 18px;
+                color: $grayText;
+                display: flex;
+                align-items: center;
+                transition: 0.3s;
+            }
+
+            .flecha{
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;    
+
+                i{
+                    font-size: 18px;
+                    color: $grayText;
+                    transition: 0.3s;
+                }
+
+            }
+
+            &:hover{
+
+
+                .actual-level{
+                    background-color: $main;
+                }
+
+                .icono,
+                .flecha{
+                    i{
+                        color: $main;
+                    }
+                }
+
+                span{
+                    color: $main;
+                }
+
+            }
+
+        }
+
+        .level-link{
+            flex-wrap: wrap;
+
+            .submenu{
+                width: 100%;
+                opacity: 0;
+                max-height: 0;
+                transition: .3s ease all;
+                background-color: $gray;
+                border-radius: 5px;
+                z-index: -1;
+
+                .link-submenu{
+                    width: 100%;
+                    padding: 15px 10px;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+        
+                    .actual-level{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translate(0, -50%);
+                        width: 2px;
+                        height: 50%;
+                        background-color: transparent;
+                        transition: 0.3s;
+                    }
+        
+                    .icono{
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+        
+                        i{
+                            font-size: 18px;
+                            color: $grayText;
+                            font-weight: bold;
+                            transition: 0.3s;
+                        }
+        
+                    }
+        
+                    span{
+                        width: calc(100% - 60px);
+                        height: 30px;
+                        font-size: 18px;
+                        color: $grayText;
+                        display: flex;
+                        align-items: center;
+                        transition: 0.3s;
+                    }
+        
+                    .flecha{
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;    
+        
+                        i{
+                            font-size: 18px;
+                            color: $grayText;
+                            transition: 0.3s;
+                        }
+        
+                    }
+        
+                    &:hover{
+        
+        
+                        .actual-level{
+                            background-color: $main;
+                        }
+        
+                        .icono,
+                        .flecha{
+                            i{
+                                color: $main;
+                            }
+                        }
+        
+                        span{
+                            color: $main;
+                        }
+        
+                    }  
+                }
+
+            }
+
+            .submenu-active{
+                opacity: 1;
+                margin-top: 10px;
+                z-index: 1;
+            }
+
+        }
+
+        .level-link-active{
+
+            .actual-level{
+                background-color: $main;
+            }
+
+            .icono{
+                i{
+                    color: $main;
+                }
+            }
+
+            span{
+                color: $main;
+            }
+
+            .flecha{
+                i{
+                    color: $main;
+                    transform: rotate(90deg);
+                }
+            }
+
+        }
+
+
+
+    }
+
+}
+
+.menu-active{
+    left: 0;
+}

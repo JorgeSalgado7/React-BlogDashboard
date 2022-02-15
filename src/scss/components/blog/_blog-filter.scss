@@ -1,0 +1,27 @@
+.blog-filter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+
+    .col{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+
+        input{
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        datalist{
+            font-size: 16px;
+            width: 100%;
+        }
+
+    }
+
+
+}

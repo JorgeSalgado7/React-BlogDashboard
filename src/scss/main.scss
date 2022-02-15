@@ -1,0 +1,63 @@
+//GLOBALS
+@import 'global/colors';
+@import 'global/columns';
+
+//LAYOUTS
+@import 'layout/dashboard';
+
+//NAVIGATION
+@import 'components/navigation/menu';
+@import 'components/navigation/header';
+
+//ICONS
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+
+//COMPONENTS
+@import 'components/ui/card';
+@import 'components/ui/table';
+
+//BLOG COMPONENTS
+@import 'components/blog/blog-card';
+@import 'components/blog/blog-filter';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button{
+    border: 0;
+    background-color: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    font-size: 18px;
+    color: $grayText;
+}
+
+input, textarea{
+    border: 1px solid transparent;
+    outline: none;
+    transition: 0.3s all ease;
+
+    &:focus{
+        box-shadow: 0 0 5px $main;
+        border: 1px solid $main;
+    }
+
+}
