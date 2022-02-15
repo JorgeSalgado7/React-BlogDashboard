@@ -13,6 +13,7 @@ import "primeicons/primeicons.css"
 import Dashboard from "./views/Dashboard";
 
 
+
 function App() {
 	return (
 
@@ -21,6 +22,7 @@ function App() {
 
 				
 				<Route path="/dashboard" element={<Dashboard/>} />
+
 
 
 			</Routes>
