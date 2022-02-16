@@ -11,6 +11,7 @@ import "primeicons/primeicons.css"
 
 //VIEWS
 import Dashboard from "./views/Dashboard";
+import Usuarios from "./views/Usuarios";
 
 
 
@@ -20,9 +21,8 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 
-				
 				<Route path="/dashboard" element={<Dashboard/>} />
-				
+				<Route path="/usuarios" element={<Usuarios/>} />
 
 			</Routes>
 		</BrowserRouter>

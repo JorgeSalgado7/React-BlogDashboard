@@ -4,7 +4,6 @@ import React from 'react'
 //NAVIGATION
 import Menu from '../components/navigation/Menu'
 import Header from '../components/navigation/Header'
-import Table from '../components/navigation/Table'
 
 
 const Dashboard = () => {
@@ -17,8 +16,6 @@ const Dashboard = () => {
             <main>
 
                 <Header/>
-
-                <Table/>
 
 
             </main>
