@@ -9,6 +9,9 @@ import "primereact/resources/themes/lara-light-indigo/theme.css"
 import "primereact/resources/primereact.min.css"
 import "primeicons/primeicons.css"
 
+//PRIME REACT FLEX
+import 'primeflex/primeflex.scss';
+
 //VIEWS
 import Dashboard from "./views/Dashboard";
 import Usuarios from "./views/Usuarios";
