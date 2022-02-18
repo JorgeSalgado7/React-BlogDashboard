@@ -3,7 +3,7 @@ import React from 'react'
 //NAVIGATION
 import Menu from '../../components/navigation/Menu'
 import Header from '../../components/navigation/Header'
-import Tarjetablog from '../../components/blog/Tarjetablog'
+import TarjetaBlog from '../../components/blog/TarjetaBlog'
 
 const Index = () => {
 
@@ -14,10 +14,12 @@ const Index = () => {
             <Menu/>
 
             <main>
-
                 <Header/>
-                
-                <Tarjetablog/>
+                <div class="p-grid">
+                     <div class="col-12 md:col-4">
+                      <TarjetaBlog/>
+                     </div>
+                 </div>
 
             </main>
 
