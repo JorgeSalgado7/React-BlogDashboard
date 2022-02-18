@@ -1,20 +1,24 @@
 import React from 'react'
-import '/node_modules/primeflex/primeflex.css';
-import logo192 from '../logo192.png';
 
-const Tarjetablog = () => {
+const TarjetaBlog = () => {
 
     return(
-    <div class ="TarjetaBlog">
-         <div class="picture"><img src = {logo192}/></div>
-             <h1 class="title">Nombre </h1>
-                 <div class= 'body'>
-                         <h2>Titulo de blog</h2>
-                         <h3>Autor </h3>
-                         <h4>Fecha de publicacion</h4>
-                     </div>
-    </div>
+
+        <div className ="TarjetaBlog">
+
+            <div className="imgBx">
+                <img src="" alt=""/>
+            </div>
+
+            <div className="contenido">
+                <h1>Título</h1>
+                <p>Autor:</p>
+                <p>Fecha de publicacion:</p>
+            </div>
+
+        </div>
          
     )
 }
-export default Tarjetablog
+
+export default TarjetaBlog

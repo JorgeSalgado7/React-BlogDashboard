@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 
 //CONFIG
@@ -10,7 +11,7 @@ import "primereact/resources/primereact.min.css"
 import "primeicons/primeicons.css"
 
 //PRIME REACT FLEX
-import 'primeflex/primeflex.scss';
+import "/node_modules/primeflex/primeflex.css"
 
 //VIEWS
 import Dashboard from "./views/Dashboard";
