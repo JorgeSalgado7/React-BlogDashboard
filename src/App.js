@@ -15,6 +15,8 @@ import 'primeflex/primeflex.scss';
 //VIEWS
 import Dashboard from "./views/Dashboard";
 import Usuarios from "./views/Usuarios";
+import Index from "./views/blog/Index";
+
 
 
 
@@ -26,6 +28,7 @@ function App() {
 
 				<Route path="/dashboard" element={<Dashboard/>} />
 				<Route path="/usuarios" element={<Usuarios/>} />
+				<Route path="/blog" element={<Index/>} />
 
 			</Routes>
 		</BrowserRouter>
