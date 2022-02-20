@@ -4,7 +4,7 @@ import React from 'react'
 import Menu from '../../components/navigation/Menu'
 import Header from '../../components/navigation/Header'
 
-const CreateBlogs = () => {
+const CreateBlog = () => {
     return (
         
         <div className='dashboard'>
@@ -29,4 +29,4 @@ const CreateBlogs = () => {
     )
 }
 
-export default CreateBlogs
+export default CreateBlog

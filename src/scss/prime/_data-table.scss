@@ -1,0 +1,50 @@
+.p-datatable{
+            
+    .p-datatable-thead{
+
+        tr{
+
+            //* DATA TABLE
+            th{
+                background-color: $main!important;
+
+                .p-column-header-content{
+
+                    .p-column-title{
+                        color: $white;
+                    }
+
+                }
+
+            }
+
+            //* SORTABLE TABLE
+            .p-sortable-column{
+                background-color: $main;
+                transition: 0.3s;
+
+                &:hover{
+                    background-color: $main-50;
+                }
+
+                .p-column-header-content{
+
+                    .p-column-title{
+                        color: $white;
+                    }
+
+                }
+
+                .p-sortable-column-icon{
+                    color: $white;
+                }
+
+                
+            }
+
+        }
+
+    }
+
+
+}

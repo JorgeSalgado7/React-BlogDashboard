@@ -24,18 +24,18 @@ const Users = () => {
 
             <Menu/>
 
-            <main className='usuarios'>
+            <main className='users'>
 
                 <Header/>
 
-                {/** TABLA DE USUARIOS */}
-                <div className="caja">
+                {/** USERS TABLES */}
+                <div className="panel-box">
 
                     <DataTable >
-                        <Column header="Nombre"></Column>
-                        <Column header="Apellido"></Column>
-                        <Column header="Correo"></Column>
-                        <Column header="Fecha de creación"></Column>
+                        <Column header="Nombre" sortable></Column>
+                        <Column header="Apellido" sortable></Column>
+                        <Column header="Correo" sortable></Column>
+                        <Column header="Fecha de creación" sortable></Column>
                         <Column header="Acciones" body={TEMPLATE_ACCIONES}></Column>
                     </DataTable>
 

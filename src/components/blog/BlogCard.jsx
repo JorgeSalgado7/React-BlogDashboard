@@ -1,16 +1,16 @@
 import React from 'react'
 
-const TarjetaBlog = () => {
+const BlogCard = () => {
 
     return(
 
-        <div className ="TarjetaBlog">
+        <div className ="blog-card">
 
             <div className="imgBx">
                 <img src="" alt=""/>
             </div>
 
-            <div className="contenido">
+            <div className="content">
                 <h1>Título</h1>
                 <p>Autor:</p>
                 <p>Fecha de publicacion:</p>
@@ -21,4 +21,4 @@ const TarjetaBlog = () => {
     )
 }
 
-export default TarjetaBlog
+export default BlogCard

@@ -4,8 +4,8 @@ import React from 'react'
 import Menu from '../../components/navigation/Menu'
 import Header from '../../components/navigation/Header'
 
-//* COMPONETES BLOG
-import TarjetaBlog from '../../components/blog/TarjetaBlog'
+//* BLOG COMPONENTS
+import BlogCard from '../../components/blog/BlogCard'
 
 
 
@@ -22,9 +22,9 @@ const Blogs = () => {
 
                 <div className="grid">
 
-                    {/** TARJETA DE BLOG */}
+                    {/** BLOG CARDS*/}
                     <div className="col-12 md:col-4">
-                        <TarjetaBlog/>
+                        <BlogCard />
                     </div>
 
 

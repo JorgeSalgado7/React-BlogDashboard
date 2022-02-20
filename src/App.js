@@ -22,6 +22,7 @@ import Users from "./views/User/Users"
 
 //* BLOG VIEWS
 import Blogs from "./views/Blog/Blogs"
+import CreateBlog from "./views/Blog/CreateBlog";
 
 
 
@@ -32,8 +33,10 @@ function App() {
 			<Routes>
 
 				<Route path="/dashboard" element={<Dashboard/>} />
-				<Route path="/usuarios" element={<Users/>} />
+				<Route path="/users" element={<Users/>} />
+
 				<Route path="/blog" element={<Blogs/>} />
+				<Route path="/blog/create" element={<CreateBlog/>} />
 
 			</Routes>
 		</BrowserRouter>

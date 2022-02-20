@@ -76,14 +76,14 @@ const Menu = () => {
                             <span>Ver todos</span>
                         </Link>
 
-                        <Link to="/blog/agregar" className="link-submenu">
+                        <Link to="/blog/create" className="link-submenu">
                             <div className="icono">
                                 <i className="bi bi-journal-plus"></i>
                             </div>
                             <span>Agregar nuevo</span>
                         </Link>
 
-                        <Link to="/blog/categorias" className="link-submenu">
+                        <Link to="/blog/categories" className="link-submenu">
                             <div className="icono">
                                 <i className="bi bi-list-nested"></i>
                             </div>
@@ -108,14 +108,14 @@ const Menu = () => {
                     {/** SUB MENÚ */}
                     <div className="submenu">
 
-                        <Link to="/usuarios" className="link-submenu">
+                        <Link to="/users" className="link-submenu">
                             <div className="icono">
                                 <i className="bi bi-people"></i>
                             </div>
                             <span>Ver todos</span>
                         </Link>
 
-                        <Link to="/usuarios/agregar" className="link-submenu">
+                        <Link to="/users/create" className="link-submenu">
                             <div className="icono">
                                 <i className="bi bi-person-plus"></i>
                             </div>
@@ -127,7 +127,7 @@ const Menu = () => {
                 </button>
 
                 {/** PERFIL */}
-                <Link to="/perfil" className="link-menu">
+                <Link to="/profile" className="link-menu">
                     <div className="actual-level"></div>
                     <div className="icono">
                         <i className="bi bi-person"></i>
