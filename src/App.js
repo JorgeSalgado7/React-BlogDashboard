@@ -1,23 +1,27 @@
 import React from "react";
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 
-//CONFIG
+
+//* CONFIG
 import './scss/main.scss'
 import './config/axios.settings'
 
-//PRIME REACT STYLES
+
+//* PRIME REACT STYLES
 import "primereact/resources/themes/lara-light-indigo/theme.css"
 import "primereact/resources/primereact.min.css"
 import "primeicons/primeicons.css"
-
-//PRIME REACT FLEX
 import "/node_modules/primeflex/primeflex.css"
 
-//VIEWS
-import Dashboard from "./views/Dashboard";
-import Usuarios from "./views/Usuarios";
-import Index from "./views/blog/Index";
 
+//* MAIN VIEWS
+import Dashboard from "./views/Dashboard"
+
+//* USER VIEWS
+import Users from "./views/User/Users"
+
+//* BLOG VIEWS
+import Blogs from "./views/Blog/Blogs"
 
 
 
@@ -28,8 +32,8 @@ function App() {
 			<Routes>
 
 				<Route path="/dashboard" element={<Dashboard/>} />
-				<Route path="/usuarios" element={<Usuarios/>} />
-				<Route path="/blog" element={<Index/>} />
+				<Route path="/usuarios" element={<Users/>} />
+				<Route path="/blog" element={<Blogs/>} />
 
 			</Routes>
 		</BrowserRouter>

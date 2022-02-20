@@ -1,12 +1,15 @@
 import React from 'react'
 
-//NAVIGATION
+//* NAVIGATION
 import Menu from '../../components/navigation/Menu'
 import Header from '../../components/navigation/Header'
+
+//* COMPONETES BLOG
 import TarjetaBlog from '../../components/blog/TarjetaBlog'
 
 
-const Index = () => {
+
+const Blogs = () => {
 
     return(
 
@@ -19,13 +22,11 @@ const Index = () => {
 
                 <div className="grid">
 
+                    {/** TARJETA DE BLOG */}
                     <div className="col-12 md:col-4">
                         <TarjetaBlog/>
                     </div>
 
-                    <div className="col-12 md:col-4">
-                        <TarjetaBlog/>
-                    </div>
 
                  </div>
 
@@ -37,4 +38,4 @@ const Index = () => {
 
 }
 
-export default Index
+export default Blogs
