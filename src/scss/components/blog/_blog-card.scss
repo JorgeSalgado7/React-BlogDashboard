@@ -4,38 +4,32 @@
       border-radius: 16px;
       overflow: hidden;
       
-      .box{
+      .tool-box{
         position: absolute;
         width: 100%;
         padding: 20px;
         border-radius: 16px;
         width: 170px;
-        height: 100px;
         top: 53px;
         right: 15px;
         background-color: $white;
         line-height: 30px;
-        word-break: 5px; 
-        word-spacing: 30px;
 
-       
-        .e{
-           
-            color: $black;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-         
-            
+        .btn-tool-box{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 17px;
+
+            i{
+                margin-right: 10px;
+            }
+
         }
-        .r{
-           
+
+        .text-delete{
             color: $red;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-          
-            
         }
 
     }

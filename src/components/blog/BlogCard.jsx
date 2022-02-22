@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 
 const BlogCard = () => {
     
-    const [caja,setCaja] = useState(false);
+    const [abrirCaja,setAbrirCaja] = useState(false);
    
-    const Caja_Herramientas = () => {
+    const CAJA_HERRAMIENTAS = () => {
   
         return(
-            <div className="box">
-               <button className="e">
-                   <i className="pi pi-pencil"> </i>
-                       Editar
+            <div className="tool-box">
+                <button className="btn-tool-box">
+                    <i className="pi pi-pencil"> </i>
+                    Editar
                 </button>
               
-               <button className="r">
-                   <i className="pi pi-trash"> </i>
-                      Eliminar
-               </button>
+                <button className="btn-tool-box text-delete">
+                    <i className="pi pi-trash"> </i>
+                    Eliminar
+                </button>
            
-                </div>
+            </div>
         
         )
     }
@@ -26,17 +26,15 @@ const BlogCard = () => {
     return(
         <div className ="blog-card">
             
-           <div className="imgBx">
-             <img src="" alt=""/>
+            <div className="imgBx">
+                
+                <img src="" alt=""/>
              
-
-                 <div className= "Ellipse">
-                         <button onClick={()=> setCaja(!caja)} className="pi pi-ellipsis-v">
-                         </button> 
-                         
-                 </div>
+                <button onClick={()=> setAbrirCaja(!abrirCaja)} className= "Ellipse">
+                    <i className="pi pi-ellipsis-v"></i>
+                </button>          
                  
-                 {caja && <Caja_Herramientas />}
+            {abrirCaja ? <CAJA_HERRAMIENTAS/> : false }
 
            </div>
             
