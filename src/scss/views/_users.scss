@@ -1,3 +1,65 @@
 .users{
     width: 100%;
+
+    .nav-users{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 30px 0;
+
+        .filters{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .filter{
+                padding: 13px 16px;
+                background-color: $white;
+                border-radius: 16px;
+                box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.1);
+                margin-right: 15px;
+                height: 50px;
+
+                @media(max-width: 1199px){
+                    width: 100%;
+                    margin-bottom: 15px;
+                    margin-right: 0;
+                }
+
+                label{
+                    font-size: 18px;
+                }
+
+                input{
+                    height: 100%;
+                    font-size: 18px;
+                    border: 0;
+                    border-bottom: 1px solid $grayText;
+                    padding: 0 5px;
+
+                    &:focus{
+                        box-shadow: none;
+                    }
+
+                }
+
+            
+            }
+
+            .btn{
+                box-shadow: none;
+                font-weight: normal;
+            }
+
+        }
+
+        .btn{
+            height: 50px;
+        }
+
+    }
+
+
 }

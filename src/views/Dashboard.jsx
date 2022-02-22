@@ -15,7 +15,7 @@ const Dashboard = () => {
 
             <main>
 
-                <Header/>
+                <Header route="Dashboard"/>
 
 
             </main>

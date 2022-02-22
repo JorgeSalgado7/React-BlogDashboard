@@ -18,7 +18,7 @@ const Blogs = () => {
             <Menu/>
 
             <main>
-                <Header/>
+                <Header route="Blogs"/>
 
                 <div className="grid">
 

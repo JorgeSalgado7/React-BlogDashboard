@@ -33,7 +33,7 @@ const CreateBlog = () => {
             <Menu/>
 
             <main>
-                <Header/>
+                <Header route="Crear blog" />
 
                 <div className="grid">
 

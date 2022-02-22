@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = (props) => {
+const Header = ({route}) => {
     
     const FUNCION_MENU = () => {
         const TOOGLE = document.querySelector('.toggle')
@@ -13,7 +13,17 @@ const Header = (props) => {
     return(
         <header className='header'>
 
-            <h4>{props.ruta}</h4>
+            <h4>{route}</h4>
+
+            <div className="icons">
+
+                <div className="icon icon-notifications">
+                    <i className='bi bi-bell-fill'></i>
+                </div>
+
+                <div className="icon icon-image"></div>
+
+            </div>
 
             <button className="toggle" onClick={()=>FUNCION_MENU()}>
                 <div className="bar"></div>
