@@ -1,10 +1,10 @@
-.box{
+.blog-card{
     width: 100%;
       background-color: #ffffff;
       border-radius: 16px;
       overflow: hidden;
       
-      .blog-card{
+      .box{
         position: absolute;
         width: 100%;
         padding: 20px;
@@ -15,19 +15,26 @@
         right: 15px;
         background-color: $white;
         line-height: 30px;
+        word-break: 5px; 
+        word-spacing: 30px;
 
-        e{
+       
+        .e{
+           
             color: $black;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
+         
             
         }
-        r{
+        .r{
+           
             color: $red;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
+          
             
         }
 

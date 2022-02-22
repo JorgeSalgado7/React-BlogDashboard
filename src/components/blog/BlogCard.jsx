@@ -1,35 +1,42 @@
 import React, { useState } from 'react';
 
-const Pulse = () => {
-  
-    return(
-        <div className="blog-card">
-           <button><e className='pi pi-pencil'> Editar</e></button>
-           <br></br>
-           <button><r className='pi pi-trash'> Eliminar</r></button>
-        </div>
-    
-    )
-}
-
-
 const BlogCard = () => {
     
-    const [pulse,setPulse] = useState(false);
+    const [caja,setCaja] = useState(false);
+   
+    const Caja_Herramientas = () => {
+  
+        return(
+            <div className="box">
+               <button className="e">
+                   <i className="pi pi-pencil"> </i>
+                       Editar
+                </button>
+              
+               <button className="r">
+                   <i className="pi pi-trash"> </i>
+                      Eliminar
+               </button>
+           
+                </div>
+        
+        )
+    }
 
     return(
-        <div className ="box">
+        <div className ="blog-card">
             
            <div className="imgBx">
              <img src="" alt=""/>
              
 
                  <div className= "Ellipse">
-                         <button onClick={()=> setPulse(!pulse)} onClick={()=> setPulse(!pulse)} className="pi pi-ellipsis-v">
+                         <button onClick={()=> setCaja(!caja)} className="pi pi-ellipsis-v">
                          </button> 
                          
                  </div>
-                 {pulse && <Pulse />}
+                 
+                 {caja && <Caja_Herramientas />}
 
            </div>
             
