@@ -6,11 +6,13 @@
          display: flex;
          align-items: center;
          justify-content: space-between;
+         flex-wrap: wrap;
          margin: 30px 0;
 
     .filters{
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         
 
         .filter{
@@ -25,7 +27,10 @@
             @media(max-width: 1199px){
                 width: 100%;
                 margin-bottom: 15px;
-                margin-right: 0;
+               
+                
+            
+                
             }
 
             label{
@@ -51,10 +56,14 @@
                 border-bottom: 1px solid $grayText;
                 padding: 0 5px;
                 width: 50px;
-               
+
+                 &:focus{
+                    box-shadow: none;
+                 }
 
         
         }
+        
     }
         .btn{
             box-shadow: none;
@@ -63,7 +72,11 @@
             width: 160px;
         }
        
-        }
+    }
+    .btn{
+        height: 50px;
+    }
 
     }
+ 
 }
