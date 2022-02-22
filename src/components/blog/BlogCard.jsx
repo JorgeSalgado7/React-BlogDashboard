@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
+
 const BlogCard = () => {
-    
+
     const [abrirCaja,setAbrirCaja] = useState(false);
    
     const CAJA_HERRAMIENTAS = () => {
@@ -24,8 +25,9 @@ const BlogCard = () => {
     }
 
     return(
-        <div className ="blog-card">
-            
+        
+<div className ="blog-card">
+
             <div className="imgBx">
                 
                 <img src="" alt=""/>
@@ -45,7 +47,7 @@ const BlogCard = () => {
             </div>
 
         </div>
-        
+
     )
 }
 
