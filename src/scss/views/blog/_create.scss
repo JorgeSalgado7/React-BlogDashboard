@@ -1,0 +1,76 @@
+.create-blog{
+    width: 100%;
+
+    .nav-create-blog{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px 0;
+
+        .btn-container{
+            display: flex;
+            align-items: center;
+
+            .btn-white{
+                margin-right: 15px;
+            }
+
+        }
+
+    }
+
+    .text-editor{
+        width: 100%;
+
+        label{
+            font-size: 22px;
+            color: $grayText;
+        }
+
+        .ck-editor{
+            margin-top: 15px;
+            
+            .ck-content{
+                min-height: 200px;
+            }
+
+        }
+
+    }
+
+    .create-blog-image{
+        
+        label{
+            font-size: 22px;
+            color: $grayText;
+        }
+
+        .imgBx{
+            width: 100%;
+            min-height: 150px;
+            margin-top: 15px;
+            background-color: $gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 100%;
+            }
+
+        }
+
+        .btn{
+            width: 100%;
+            margin-top: 15px;
+            color: $white;
+            font-size: 18px;
+        }
+
+        input[type="file"]{
+            display: none;
+        }
+
+    }
+
+}

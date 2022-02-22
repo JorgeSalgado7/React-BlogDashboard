@@ -1,0 +1,13 @@
+.p-multiselect{
+    width: 100%;
+
+    &:focus{
+        box-shadow: none!important;
+        border-color: $main!important;
+    }
+
+    &:hover{
+        border-color: $main!important;
+    }
+
+}

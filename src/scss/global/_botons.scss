@@ -1,0 +1,43 @@
+button{
+    border: 0;
+    background-color: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 16px;
+    border-radius: 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+
+    span{
+        margin-left: 10px;
+    }
+
+}
+
+.btn-main{
+    background-color: $main;
+    color: $white;
+
+    &:hover{
+        background-color: $mainHover;
+    }
+
+}
+
+.btn-white{
+    background-color: $white;
+    color: $grayText;
+
+    &:hover{
+        background-color: $whiteHover;
+    }
+
+}

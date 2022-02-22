@@ -1,0 +1,29 @@
+.prime-input-container{
+    width: 100%;
+    margin-bottom: 15px;
+
+    label{
+        font-size: 22px;
+        color: $grayText;
+        margin-bottom: 10px;
+    }
+    
+    .p-inputtext{
+        width: 100%;
+
+        &:focus{
+            box-shadow: none!important;
+            border-color: $main!important;
+        }
+
+        &:hover{
+            border-color: $main!important;
+        }
+
+    }
+
+    .p-input-border-down{
+
+    }
+
+}

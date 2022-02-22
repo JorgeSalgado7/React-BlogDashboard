@@ -1,9 +1,12 @@
 //GLOBALS
 @import 'global/colors';
 @import 'global/fonts';
+@import 'global/botons';
 
 //PRIME COMPONENTS
 @import 'prime/data-table';
+@import 'prime/input-text';
+@import 'prime/multi-select';
 
 //LAYOUTS
 @import 'layout/dashboard';
@@ -14,13 +17,14 @@
 
 //DASHBOARD COMPONENTS
 @import 'components/panel-box';
+@import 'components/blog/blog-card';
 
 //ICONS
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
 
 //VIEWS
 @import 'views/users';
-@import 'components/blog/blog-card';
+@import 'views/blog/create';
 
 
 
@@ -35,13 +39,6 @@ a{
     text-decoration: none;
     cursor: pointer;
     transition: 0.3s;
-}
-
-button{
-    border: 0;
-    background-color: transparent;
-    transition: 0.3s;
-    cursor: pointer;
 }
 
 li{
