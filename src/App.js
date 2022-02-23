@@ -24,6 +24,7 @@ import CreateUser from "./views/User/crearUser"
 //* BLOG VIEWS
 import Blogs from "./views/Blog/Blogs"
 import CreateBlog from "./views/Blog/CreateBlog";
+import Categorias from "./views/Blog/Categorias";
 
 
 
@@ -39,6 +40,7 @@ function App() {
 
 				<Route path="/blog" element={<Blogs/>} />
 				<Route path="/blog/create" element={<CreateBlog/>} />
+				<Route path="/blog/categories" element={<Categorias/>} />
 
 			</Routes>
 		</BrowserRouter>

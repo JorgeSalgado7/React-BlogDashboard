@@ -1,0 +1,75 @@
+.create-categorias{
+    width: 100%;
+
+  
+    .nav-create-categorias{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px 0;
+
+    }
+  
+    .filters{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .filter{
+            padding: 13px 16px;
+            background-color: $white;
+            border-radius: 16px;
+            box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.1);
+            margin-right: 15px;
+            height: 50px;
+
+            @media(max-width: 1199px){
+                width: 100%;
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+
+            label{
+                font-size: 18px;
+            }
+
+            input{
+                height: 100%;
+                font-size: 18px;
+                border: 0;
+                border-bottom: 1px solid $grayText;
+                padding: 0 5px;
+
+                &:focus{
+                    box-shadow: none;
+                }
+
+            }
+
+        
+        }
+
+    }
+
+ 
+    
+    
+    .prime-input-container{
+        label{
+          
+            color: black;
+            font-weight: bold;
+            margin-right: 15px;
+           
+    }
+
+    }
+   
+    .p-input-border-down{ 
+             width: 340px;
+             margin-left: 5px;
+           
+    }
+  
+     
+}
