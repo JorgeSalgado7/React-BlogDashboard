@@ -1,0 +1,56 @@
+.create-user{
+    width: 100%;
+
+    .nav-create-user{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px 0;
+
+        .btn-container{
+            display: flex;
+            align-items: center;
+
+            .btn-white{
+                margin-right: 15px;
+            }
+        }
+
+    }
+
+    .panel-box{ 
+        width: 1560px;
+     } 
+
+     .img{
+        position: relative;
+        width: 250px;
+        height: 250px;
+        background-color: $grayText;
+        overflow: hidden;
+        border-radius: 200px;
+
+        img{
+            width: 100%;
+        }
+
+    }
+
+    .prime-input-container{
+        label{
+          
+            color: black;
+            font-weight: bold;
+            margin-left: 15px;
+           
+    }
+
+    }
+   
+    .p-input-border-down{ 
+             width: 740px;
+             margin-left: 5px;
+           
+    }
+     
+}
