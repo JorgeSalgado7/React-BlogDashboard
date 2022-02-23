@@ -27,8 +27,7 @@ const CrearUser= () => {
         <Header route="Crear Usuario" />
 
             <div className="col-6 nav-create-user">
-                <p>Nuevo Usuario</p>
-
+            <p>Nuevo Usuario</p>
             </div>
 
                   
@@ -40,8 +39,8 @@ const CrearUser= () => {
                             {/**IMAGEN*/}
                             <div className="col-12">                               
                                      <div className="img">
-                                       <img src="" alt=""/>
-                                      </div>
+                                     <img src="" alt=""/>
+                                     </div>
                             </div>
 
                                 
@@ -76,9 +75,9 @@ const CrearUser= () => {
                             </div>
 
                             <div className="col-6">
-                            <label className='btn btn-main btn-image' htmlFor='image'>
+                                    <label className='btn btn-main btn-image' htmlFor='image'>
                                     <span>Crear Usuario</span>
-                            </label>
+                                    </label>
                             </div>
                    </div>
 
