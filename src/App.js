@@ -19,6 +19,7 @@ import Dashboard from "./views/Dashboard"
 
 //* USER VIEWS
 import Users from "./views/User/Users"
+import CreateUser from "./views/User/crearUser"
 
 //* BLOG VIEWS
 import Blogs from "./views/Blog/Blogs"
@@ -34,6 +35,7 @@ function App() {
 
 				<Route path="/dashboard" element={<Dashboard/>} />
 				<Route path="/users" element={<Users/>} />
+				<Route path="/users/create" element={<CreateUser/>} />
 
 				<Route path="/blog" element={<Blogs/>} />
 				<Route path="/blog/create" element={<CreateBlog/>} />
