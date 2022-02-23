@@ -11,62 +11,64 @@ import BlogCard from '../../components/blog/BlogCard'
 
 
 const Blogs = () => {
+
     const [date, setDate] = useState('');
-    const [titulo, setTitulo] = useState('');
+    const [title, setTitle] = useState('');
     const [name, setName] = useState('');
-    const [categoria, setCategoria] = useState('');
+    const [category, setCategory] = useState('');
 
     return(
 
-<div className="Contenido">
 
-        <div className='dashboard'>
 
-            <Menu/>
+    <div className='dashboard blog'>
 
-            <main>
-                <Header route="Blogs"/>
+        <Menu/>
 
-                <div className="nav-blog">
+        <main>
+
+            <Header route="Blogs"/>
+
+            {/** FILTERS */}
+            <div className="nav-blog">
  
-                       <div className="filters">
+                <div className="filters">
 
-                             <div className="filter">
-                                   <label htmlFor="">Autor</label>
-                                   <select  value={name} onChange={( (e) => setName(e.target.value) )} />  
-                            </div>
+                    <div className="filter">
+                        <label htmlFor="">Autor</label>
+                         <select  value={name} onChange={( (e) => setName(e.target.value) )} />  
+                    </div>
 
-                              <div className="filter">
-                                   <label htmlFor="">Fecha</label>
-                                   <select value={date} onChange={( (e) => setDate(e.target.value) )} />
-                             </div>
+                    <div className="filter">
+                        <label htmlFor="">Fecha</label>
+                        <select value={date} onChange={( (e) => setDate(e.target.value) )} />
+                    </div>
 
-                             <div className="filter">
-                                    <label htmlFor="">Categoria</label>
-                                    <select value={categoria} onChange={( (e) => setCategoria(e.target.value) )} />
-                             </div>
+                    <div className="filter">
+                        <label htmlFor="">Categoria</label>
+                        <select value={category} onChange={( (e) => setCategory(e.target.value) )} />
+                    </div>
 
                              
-                              <div className="filter">
-                                    <label htmlFor="">Titulo</label>
-                                    <input type="Select" value={titulo} onChange={( (e) => setTitulo(e.target.value) )} />
-                              </div>
+                    <div className="filter">
+                        <label htmlFor="">Titulo</label>
+                        <input type="Select" value={title} onChange={( (e) => setTitle(e.target.value) )} />
+                    </div>
   
 
-                              <button className='btn'>
-                                 <i className="bi bi-x-lg"></i>
-                                 <span>Limpiar filtro</span>
-                              </button>
+                    <button className='btn'>
+                        <i className="bi bi-x-lg"></i>
+                        <span>Limpiar filtro</span>
+                    </button>
 
-                 </div>
-    <button className="btn btn-main">Crear Blog</button>
+                </div>
 
-</div>
+                <button className="btn btn-main">Crear Blog</button>
 
+            </div>
 
-
-
-                <div className="grid">
+            {/** BLOGS */}
+            <div className="grid">
 
                     {/** BLOG CARDS*/}
                     <div className="col-12 md:col-4">
@@ -74,12 +76,13 @@ const Blogs = () => {
                     </div>
 
 
-                 </div>
+            </div>
 
-            </main>
+        </main>
 
-        </div>
-</div>       
+    </div>
+
+       
 
     )
 
