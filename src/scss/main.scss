@@ -8,6 +8,7 @@
 @import 'prime/input-text';
 @import 'prime/multi-select';
 
+
 //LAYOUTS
 @import 'layout/dashboard';
 
@@ -28,6 +29,8 @@
 @import 'views/blog/create';
 @import 'views/blog/blogs';
 @import 'views/blog/categorias';
+@import 'views/Auth/login';
+
 
 *{
     margin: 0;

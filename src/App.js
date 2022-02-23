@@ -12,6 +12,8 @@ import "primereact/resources/themes/lara-light-indigo/theme.css"
 import "primereact/resources/primereact.min.css"
 import "primeicons/primeicons.css"
 import "/node_modules/primeflex/primeflex.css"
+//* PRINCIPAL VIEWS
+import Login from "./views/Auth/Login"
 
 
 //* MAIN VIEWS
@@ -34,6 +36,8 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 
+			    <Route path="/" element={<Login/>} />
+				
 				<Route path="/dashboard" element={<Dashboard/>} />
 				<Route path="/users" element={<Users/>} />
 				<Route path="/users/create" element={<CreateUser/>} />
