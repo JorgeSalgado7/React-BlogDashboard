@@ -1,81 +1,67 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import { useState } from 'react'
-
-//* NAVIGATION
-
-import Header from '../../components/navigation/Header'
 
 //* PRIME COMPONENTS
 import { InputText } from 'primereact/inputtext'
+import { Password } from 'primereact/password'
 
 
 const CrearUser= () => {
-    const [correo, setCorreo] = useState('')
-    const [contraseña, setContraseña] = useState('')
-  
 
-   
+    const [correo, setCorreo] = useState('')
+    const [password, setPassword] = useState('')
 
     return (
         
-<div className="login">
+        <div className="login">
 
-    <main>
-         <div className='Message'>
-              <a>Bienvenidos!</a>
-         </div>
-                  {/**LINK*/}
-                  <div className=" col-12 nav-create-login">
-                       <p>Inicia sesión para acceder a todo tu contenido.</p>
-                         <p> Si has olvidado tu contraseña da click <a href="">aquí</a> </p>
-                     
-                  </div>
+            <div className='message'>
+                <h1>Bienvenidos!</h1>
+                <p>Inicia sesión para acceder a todo tu contenido.</p>
+                <p> Si has olvidado tu contraseña da click <Link to="">aquí</Link> </p>
+            </div>
 
+            {/** LOG IN FORM */}
+            <div className="panel-box">
 
-                <div className="panel-box">
+                {/** IMAGE */}
+                <div className="imgxx">
+                    <img src="" alt=""/>
+                </div>
 
-                            {/**IMAGEN*/}
-                    <div className="grid">
+                {/** LOGIN FORM */}
+                <div className="grid">
 
-                        <div className="col-12">
-                            <div className="prime-input-container">                           
-                                     <div className="imgxx">
-                                     <img src="" alt=""/>
-                                     </div>
-                            </div>
+                    {/** EMAIL */}
+                    <div className="col-12">   
+                        <div className="prime-input-container">
+                            <label htmlFor='correo' className="block">Correo</label>
+                            <InputText id='correo' value={correo} onChange={(e) => setCorreo(e.target.value)} placeholder="kaloni@kaloni.com" />
                         </div>
+                    </div>
 
-                                   {/**iNICIO DE SECCION*/}
-                            <div className="col-12">                               
-                                <div className="prime-input-container">
-                                        <label htmlFor=' correo ' className="block">Correo</label>
-                                        <InputText id= 'correo' className="p-input-border-down" value={correo} onChange={(e) => setCorreo(e.target.value)} placeholder="kaloni@kaloni.com" />
-                                </div>
-                            </div>
+                    {/** PASSWORD */}                
+                    <div className="col-12">
+                        <div className="prime-input-container">
+                            <label htmlFor='password' className="block">Contraseña</label>
+                            <Password id='contraseña' value={password} onChange={(e) => setPassword(e.target.value)} placeholder="*******************" />
+                        </div>
+                    </div>
 
-                                
-                             <div className="col-12">
-                                <div className="prime-input-container">
-                                    <label htmlFor='contraseña' className="block">Contraseña</label>
-                                    <InputText id='contraseña' className="p-input-border-down" value={contraseña} onChange={(e) => setContraseña(e.target.value)}placeholder="*******************" />
-                                </div>
-                            </div>
-
-
-                            <div className="col-12">
-                                    <label className='btn btn-main btn-image' htmlFor='image'>
-                                    <span>Iniciar sesión</span>
-                                    </label>
-                            </div>
-
-                     </div>
+                    {/** LOG IN BUTTON */} 
+                    <div className="col-12">
+                        <button className="btn btn-main">Iniciar sesión</button>
+                    </div>
 
                 </div>
 
-                <div className=" col-12 link"> <a href="">He olvidado mi contraseña</a></div>
-    </main>
+            </div>
 
-</div>
+            <Link to="" className='link'>He olvidado mi contraseña</Link>
+
+        </div>
 
     )
 }

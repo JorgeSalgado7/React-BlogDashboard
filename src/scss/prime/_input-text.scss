@@ -8,7 +8,8 @@
         margin-bottom: 10px;
     }
     
-    .p-inputtext{
+    .p-inputtext,
+    .p-password{
         width: 100%;
 
         &:focus{
@@ -22,8 +23,5 @@
 
     }
 
-    .p-input-border-down{
-
-    }
 
 }

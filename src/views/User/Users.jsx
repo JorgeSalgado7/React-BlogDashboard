@@ -62,7 +62,7 @@ const Users = () => {
                 {/** USERS TABLES */}
                 <div className="panel-box">
 
-                    <DataTable value={users} responsiveLayout="stack" breakpoint="960px">
+                    <DataTable value={users} header="Stack" responsiveLayout="scroll">
                         <Column header="Nombre" sortable></Column>
                         <Column header="Apellido" sortable></Column>
                         <Column header="Correo" sortable></Column>
