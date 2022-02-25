@@ -18,18 +18,25 @@ const CreateUser = () => {
 
     //ERRORS
     const [errorName, setErrorName] = useState(false)
+    const [errorApellido, setErrorApellido] = useState(false)
+    const [errorCorreo, setErrorCorreo] = useState(false)
+    const [errorRol, setErrorRol] = useState(false)
+
     
 
     const CREATE_USER = () => {
 
         //RESET ERROR VALUES
         setErrorName(false)
+        setErrorApellido(false)
+        setErrorCorreo(false)
+        setErrorRol(false)
 
         //CHECK FOR A EMPTY VALUE
         if(name==="") setErrorName(true)
-        if(apellido==="") console.log ('vacio') 
-        if(correo==="") console.log ('vacio') 
-        if(rol==="") console.log ('vacio')
+        if(apellido==="") setErrorApellido(true) 
+        if(correo==="") setErrorCorreo (true) 
+        if(rol==="")setErrorRol (true)
 
         
 
@@ -66,7 +73,7 @@ const CreateUser = () => {
                             <div className="prime-input-container">
                                 <label htmlFor=' name ' className="block">Name</label>
                                 <InputText id= 'name' className={errorName ? 'input-error' : ''} value={name} onChange={(e) => setName(e.target.value)} placeholder="Ej.Kaloni" />
-                                {errorName && (<p className='text-error'>Mensja error</p>)}
+                                {errorName && (<p className='text-error'>El nombre no puede estar vacio</p>)}
                             </div>
                         </div>
 
@@ -74,7 +81,8 @@ const CreateUser = () => {
                         <div className="col-12 md:col-6">
                             <div className="prime-input-container">
                                 <label htmlFor='apellido' className="block">Apellido</label>
-                                <InputText id='apellido' value={apellido} onChange={(e) => setApellido(e.target.value)}placeholder="Ej.Kaloni" />
+                                <InputText id='apellido' className={errorApellido ? 'input-error' : ''} value={apellido} onChange={(e) => setApellido(e.target.value)}placeholder="Ej.Kaloni" />
+                                {errorApellido && (<p className='text-error'>El Apellido no puede estar vacio</p>)}
                             </div>
                         </div>
 
@@ -82,7 +90,8 @@ const CreateUser = () => {
                         <div className="col-12 md:col-6">
                             <div className="prime-input-container">
                                 <label htmlFor='correo' className="block">Correo</label>
-                                <InputText id= 'correo' value={correo} onChange={(e) => setCorreo(e.target.value)} placeholder="Ej.Kaloni@kaloni.com"/>
+                                <InputText id= 'correo' className={errorCorreo ? 'input-error' : ''} value={correo} onChange={(e) => setCorreo(e.target.value)} placeholder="Ej.Kaloni@kaloni.com"/>
+                                {errorCorreo && (<p className='text-error'>El correo no puede estar vacio</p>)}
                             </div>
                         </div>
 
@@ -90,8 +99,9 @@ const CreateUser = () => {
                         <div className="col-12 md:col-6">
                             <div className="prime-input-container">
                                 <label htmlFor='rol' className="block">Rol de usuario</label>
-                                <MultiSelect id= 'rol' value={rol} onChange={(e) => setRol(e.target.value)} placeholder="Selecciona un rol"/>
-                            </div>
+                                <MultiSelect id= 'rol' className={errorRol ? 'input-error' : ''} value={rol} onChange={(e) => setRol(e.target.value)} placeholder="Selecciona un rol"/>
+                                {errorRol && (<p className='text-error'>El rol no puede estar vacio</p>)}
+                           </div>
                         </div>
 
                         {/** CREATE USER BUTTON */}
