@@ -15,14 +15,23 @@ const CreateUser = () => {
     const [apellido, setApellido] = useState('')
     const [correo, setCorreo] = useState('')
     const [rol, setRol] = useState('')
+
+    //ERRORS
+    const [errorName, setErrorName] = useState(false)
     
 
-    const VALIDACION = () => {
+    const CREATE_USER = () => {
 
-        if(name==="") console.log ('vacio') 
+        //RESET ERROR VALUES
+        setErrorName(false)
+
+        //CHECK FOR A EMPTY VALUE
+        if(name==="") setErrorName(true)
         if(apellido==="") console.log ('vacio') 
         if(correo==="") console.log ('vacio') 
         if(rol==="") console.log ('vacio')
+
+        
 
     }
    
@@ -56,7 +65,8 @@ const CreateUser = () => {
                         <div className="col-12 md:col-6">                               
                             <div className="prime-input-container">
                                 <label htmlFor=' name ' className="block">Name</label>
-                                <InputText id= 'name' className="p-input-border-down" value={name} onChange={(e) => setName(e.target.value)} placeholder="Ej.Kaloni" />
+                                <InputText id= 'name' className={errorName ? 'input-error' : ''} value={name} onChange={(e) => setName(e.target.value)} placeholder="Ej.Kaloni" />
+                                {errorName && (<p className='text-error'>Mensja error</p>)}
                             </div>
                         </div>
 
@@ -86,7 +96,7 @@ const CreateUser = () => {
 
                         {/** CREATE USER BUTTON */}
                         <div className="col-12 md:col-6">
-                            <button className="btn btn-main" onClick={()=>VALIDACION()}>Crear usuario</button>
+                            <button className="btn btn-main" onClick={()=>CREATE_USER()}>Crear usuario</button>
                         </div>
 
                     </div>
