@@ -15,7 +15,16 @@ const CreateUser = () => {
     const [apellido, setApellido] = useState('')
     const [correo, setCorreo] = useState('')
     const [rol, setRol] = useState('')
+    
 
+    const VALIDACION = () => {
+
+        if(name==="") console.log ('vacio') 
+        if(apellido==="") console.log ('vacio') 
+        if(correo==="") console.log ('vacio') 
+        if(rol==="") console.log ('vacio')
+
+    }
    
 
     return (
@@ -77,7 +86,7 @@ const CreateUser = () => {
 
                         {/** CREATE USER BUTTON */}
                         <div className="col-12 md:col-6">
-                            <button className="btn btn-main">Crear usuario</button>
+                            <button className="btn btn-main" onClick={()=>VALIDACION()}>Crear usuario</button>
                         </div>
 
                     </div>
