@@ -20,6 +20,36 @@ const CreateBlog = () => {
     const [category, setCategories] = useState('')
     const [content, setContent] = useState('')
 
+    //ERRORS
+    const [errorTitle, setErrorTitle] = useState(false)
+    const [errorResume, setErrorResume] = useState(false)
+    const [errorCategory, setErrorCategory] = useState(false)
+    const [errorContent, setErrorContent] = useState(false)
+ 
+   
+
+    
+    const CREATE_BLOG = () => {
+
+        //RESET ERROR VALUES
+        setErrorTitle(false)
+        setErrorResume(false)
+        setErrorCategory(false)
+        setErrorContent(false)
+     
+
+        //CHECK FOR A EMPTY VALUE
+        if(title==="") setErrorTitle(true)
+        if(resume==="") setErrorResume(true) 
+        if(category==="") setErrorCategory (true) 
+        if(content==="")setErrorContent (true)
+       
+
+        
+
+    }
+
+
     const CATEGORIES = []
 
     const GET_IMAGE = (e) => {
@@ -43,7 +73,7 @@ const CreateBlog = () => {
 
                         <div className='btn-container'>
                             <button className="btn btn-white">Vista previa</button>
-                            <button className="btn btn-main">Publicar</button>
+                            <button className="btn btn-main" onClick={()=>CREATE_BLOG()}>Publicar</button>
                         </div>
 
                     </div>
@@ -59,7 +89,8 @@ const CreateBlog = () => {
                                 <div className="col-12">
                                     <div className="prime-input-container">
                                         <label htmlFor='title' className="block">Título</label>
-                                        <InputText id='title' className="p-input-border-down" value={title} onChange={(e) => setTitle(e.target.value)} />
+                                        <InputText id='title' className={errorTitle ? 'input-error' : ''} value={title} onChange={(e) => setTitle(e.target.value)} />
+                                        {errorTitle && (<p className='text-error'>El titulo no puede estar vacio</p>)}
                                     </div>
                                 </div>
 
@@ -67,7 +98,8 @@ const CreateBlog = () => {
                                 <div className="col-12">
                                     <div className="prime-input-container">
                                         <label htmlFor='resume' className="block">Resumen</label>
-                                        <InputTextarea id='resume' className="p-input-border-down" value={resume} onChange={(e) => setResume(e.target.value)} />
+                                        <InputTextarea id='resume' className={errorResume ? 'input-error' : ''} value={resume} onChange={(e) => setResume(e.target.value)} />
+                                        {errorResume && (<p className='text-error'>El resumen no puede estar vacio</p>)}
                                     </div>
                                 </div>
 
@@ -77,9 +109,11 @@ const CreateBlog = () => {
                                    <div className="text-editor">
                                         <label>Contenido</label>
                                         <TextEditor
+                                            className={errorContent ? 'input-error' : ''}
                                             data={content}
                                             onChange={(content) => setContent(content)}
                                         />
+                                        {errorContent && (<p className='text-error'>El contenido no puede estar vacio</p>)}
                                    </div>
 
                                 </div>
@@ -101,6 +135,7 @@ const CreateBlog = () => {
                                     <div className="prime-input-container">
                                         <label htmlFor='title' className="block">Categoría</label>
                                         <MultiSelect 
+                                            className={errorCategory ? 'input-error' : ''}
                                             value={category} 
                                             options={CATEGORIES} 
                                             onChange={(e) => setCategories(e.value)} 
@@ -108,6 +143,7 @@ const CreateBlog = () => {
                                             placeholder="Selecciona una categoría" 
                                             display="chip" 
                                         />
+                                        {errorCategory && (<p className='text-error'>La categoría no puede estar vacio</p>)}
                                     </div>
                                 </div>
                             </div>
